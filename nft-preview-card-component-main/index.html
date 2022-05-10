@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <!-- font family from google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato&family=Merriweather+Sans&family=Montserrat:wght@100&family=Niconne&family=Open+Sans:wght@600&family=Outfit:wght@300;400;600&family=PT+Sans&family=Sacramento&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+
+
+</head>
+
+<body>
+
+  <!--card component that holds the order summary-->
+  <div class="container">
+
+    <!--nft image-->
+    <div class="nft-img-hover-div">
+      <div class="hover-state">
+        <div class="eye-viewer">
+          <div class="eye-viewer-inner"></div>
+        </div>
+      </div>
+      
+      <img src="images/image-equilibrium.jpg" alt="Equilibrium #3429" class="nft-img">
+      
+    </div>
+    
+
+    <!-- nft title -->
+    <div class="nft-title">
+      <h3><a href="#" id="nft-title">Equilibrium #3429</a></h3>
+    </div>
+
+    <!-- nft subtitle-->
+    <div class="subtitle nft-subtitle">
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+    </div>
+
+    <!-- nft price and no.of days left -->
+    <div class="nft-details">
+
+      <!-- this div will later be manipulted with grid-->
+      <div class="nft-price">
+        <img src="images/icon-ethereum.svg" class="nft-price-logo"></img>
+        <h4>0.041 ETH</h4>
+      </div>
+
+      <!-- this div will later be manipulted with grid-->
+      <div class="nft-days">
+        <img src="images/icon-clock.svg" class="nft-days-logo">
+        <p class="subtitle nft-days-subtitle">3 days left</p>
+      </div>
+
+    </div>
+
+    <!-- line break -->
+    <hr>
+
+    <!-- nft creator details -->
+    <div class="creator">
+      <img src="images/image-avatar.png" alt="Jules" class="creator-img">
+      <p class="subtitle creator-subtitle">
+        Creation of <strong><a href="#" id="creator-name">Jules Wyvern</a></span>
+      </p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
