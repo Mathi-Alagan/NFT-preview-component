@@ -72,40 +72,27 @@ strong {
     width: 300px;
     border-radius: 10px;  
 }
-.nft-img-hover-div {
+.nft-img-hover-state {
     position: relative;
 }
-.nft-img-hover-div:hover > .hover-state {
+.nft-hover {
     position: absolute;
+}
+.nft-img-hover-state:hover > .bg-div {
     width: 300px;
     height: 300px;
     border-radius: 10px;
     background-color: hsla(178, 100%, 50%, 0.507);    
 }
-
-.nft-img-hover-div:hover > .hover-state > .eye-viewer {
-    background-color: var(--clr-white);
-    width: 38px;
-    height: 38px;
-    border-radius: 80% 7px;
-    position: absolute;
-    top: 135px;
-    left: 135px;
-    transform: rotate(45deg);
-    
+.eye-viewer {
+    opacity: 0;
 }
-.nft-img-hover-div:hover > .hover-state > .eye-viewer > .eye-viewer-inner {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: var(--clr-white);
-    box-shadow: 0 0 0 4px var(--clr-cyan);
-    position: inherit;
-    top: 13px;
-    left: 13px;
+.nft-img-hover-state:hover > .bg-div > .eye-viewer {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-
-
 
 
 
