@@ -1,0 +1,367 @@
+<<<<<<< HEAD:nft-preview-card-component-main/css/styles.css
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+                 /*-----------------Custom Properties--------------------*/
+:root {
+    --ff-primary: 'Outfit', sans-serif; 
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 600;
+
+    /*HSL color values are specified with: hsl(hue, saturation, lightness)
+     Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, 240 is blue.
+     Saturation is a percentage value; 0% means a shade of gray and 100% is the full color.
+     Lightness is also a percentage; 0% is black, 100% is white.
+    */
+
+    --clr-primary: hsl(217, 54%, 11%);    /*body bg*/
+    --clr-secondary-1: hsl(216, 50%, 16%);   /*card component bg*/
+    --clr-secondary-2: hsl(215, 51%, 70%);   /*subtitle color, color of the image in hover state*/
+    --clr-secondary-3: hsl(215, 32%, 27%);   /*horizontal rule color*/
+    --clr-cyan: hsl(178, 100%, 50%);   /*price color*/
+    --clr-white: hsl(0, 0%, 100%);   
+
+}
+
+
+                /*--------------------General Styles--------------------------*/
+body {
+    background: var(--clr-primary);   
+    color: var(--clr-white);
+    font-family: var(--ff-primary);
+    padding: 100px 0;   /*to provide some gap between top and bottom of screen*/
+    display: flex;    /*easy way to center*/
+    justify-content: center;   /*centers horizontally*/
+    align-items: center;   /*centers vertically*/
+    
+}
+
+/*styling the horizontal rule*/
+hr {
+    color: var(--clr-secondary-3);   
+}
+
+
+/*styling the strong tag*/
+strong {
+    color: var(--clr-white);
+}
+
+
+
+                                /*----------------styling the card-------------------*/
+.container {
+    background: var(--clr-secondary-1);
+    padding: 20px;   /*making sure the contents don't touch the div*/
+    width: min-content;  /*the div occupies the width of the largest element in it.. here it is the image*/
+    border-radius: 10px;
+    box-shadow: 0 20px 5px 10px hsl(214, 58%, 10%);
+}
+
+
+
+
+
+
+.nft-img {
+    
+    width: 300px;
+    border-radius: 10px;  
+}
+.nft-img-hover-state {
+    position: relative;
+}
+.nft-hover {
+    position: absolute;
+}
+.nft-img-hover-state:hover > .bg-div {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: hsla(178, 100%, 50%, 0.507);    
+}
+.eye-viewer {
+    opacity: 0;
+}
+.nft-img-hover-state:hover > .bg-div > .eye-viewer {
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+.nft-title {
+    margin-top: 20px;
+}
+#nft-title {
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+    text-decoration: none;
+    margin-top: 17px;  /*gap between image and title*/
+}
+#nft-title:hover {
+    color: var(--clr-cyan);
+}
+
+.subtitle {
+    color: var(--clr-secondary-2);
+    font-weight: var(--fw-light);
+}
+
+.nft-subtitle {
+    margin: 20px 0;  /*gap between it and hr*/
+}
+
+
+
+
+
+
+
+.nft-details {
+    display: flex;  /*to make the price and no of days appear at opposite corners*/
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.nft-price {
+    color: var(--clr-cyan);
+    display: grid;   /*to make the etherium symbol and price appear side by side*/
+    grid-template-areas: 
+        "logo price";
+}
+.nft-price-logo {
+    margin-right: 7px;
+}
+.nft-days {
+    display: grid;
+    grid-template-areas: 
+        "logo days";
+}
+.nft-days-logo {
+    margin-right: 7px;
+    transform: translate(0, 2px);  /*to get it align with the no of days*/
+}
+
+
+
+
+
+
+.creator {
+    margin: 17px 0;
+    line-height: 2.5; /*just making sure the profile and name aligns equally*/
+}
+.creator-img {
+    float: left;   /*making it appear to the right and the text content wrapping around it*/
+    width: 45px;   
+    border-radius: 100%;   /*making it's div to circle to give a white border*/
+    border: 1px solid var(--clr-white);  
+    margin-right: 20px;
+}
+#creator-name {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+#creator-name:hover {
+    color: var(--clr-cyan);
+=======
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+                 /*-----------------Custom Properties--------------------*/
+:root {
+    --ff-primary: 'Outfit', sans-serif; 
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 600;
+
+    /*HSL color values are specified with: hsl(hue, saturation, lightness)
+     Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, 240 is blue.
+     Saturation is a percentage value; 0% means a shade of gray and 100% is the full color.
+     Lightness is also a percentage; 0% is black, 100% is white.
+    */
+
+    --clr-primary: hsl(217, 54%, 11%);    /*body bg*/
+    --clr-secondary-1: hsl(216, 50%, 16%);   /*card component bg*/
+    --clr-secondary-2: hsl(215, 51%, 70%);   /*subtitle color, color of the image in hover state*/
+    --clr-secondary-3: hsl(215, 32%, 27%);   /*horizontal rule color*/
+    --clr-cyan: hsl(178, 100%, 50%);   /*price color*/
+    --clr-white: hsl(0, 0%, 100%);   
+
+}
+
+
+                /*--------------------General Styles--------------------------*/
+body {
+    background: var(--clr-primary);   
+    color: var(--clr-white);
+    font-family: var(--ff-primary);
+    padding: 100px 0;   /*to provide some gap between top and bottom of screen*/
+    display: flex;    /*easy way to center*/
+    justify-content: center;   /*centers horizontally*/
+    align-items: center;   /*centers vertically*/
+    
+}
+
+/*styling the horizontal rule*/
+hr {
+    color: var(--clr-secondary-3);   
+}
+
+
+/*styling the strong tag*/
+strong {
+    color: var(--clr-white);
+}
+
+
+
+                                /*----------------styling the card-------------------*/
+.container {
+    background: var(--clr-secondary-1);
+    padding: 20px;   /*making sure the contents don't touch the div*/
+    width: min-content;  /*the div occupies the width of the largest element in it.. here it is the image*/
+    border-radius: 10px;
+    box-shadow: 0 20px 5px 10px hsl(214, 58%, 10%);
+}
+
+
+
+
+
+
+.nft-img {
+    
+    width: 300px;
+    border-radius: 10px;  
+}
+.nft-img-hover-div {
+    position: relative;
+}
+.nft-img-hover-div:hover > .hover-state {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: hsla(178, 100%, 50%, 0.507);    
+}
+
+.nft-img-hover-div:hover > .hover-state > .eye-viewer {
+    background-color: var(--clr-white);
+    width: 38px;
+    height: 38px;
+    border-radius: 80% 7px;
+    position: absolute;
+    top: 135px;
+    left: 135px;
+    transform: rotate(45deg);
+    
+}
+.nft-img-hover-div:hover > .hover-state > .eye-viewer > .eye-viewer-inner {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--clr-white);
+    box-shadow: 0 0 0 4px var(--clr-cyan);
+    position: inherit;
+    top: 13px;
+    left: 13px;
+}
+
+
+
+
+
+
+
+
+.nft-title {
+    margin-top: 20px;
+}
+#nft-title {
+    font-weight: var(--fw-bold);
+    color: var(--clr-white);
+    text-decoration: none;
+    margin-top: 17px;  /*gap between image and title*/
+}
+#nft-title:hover {
+    color: var(--clr-cyan);
+}
+
+.subtitle {
+    color: var(--clr-secondary-2);
+    font-weight: var(--fw-light);
+}
+
+.nft-subtitle {
+    margin: 20px 0;  /*gap between it and hr*/
+}
+
+
+
+
+
+
+
+.nft-details {
+    display: flex;  /*to make the price and no of days appear at opposite corners*/
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.nft-price {
+    color: var(--clr-cyan);
+    display: grid;   /*to make the etherium symbol and price appear side by side*/
+    grid-template-areas: 
+        "logo price";
+}
+.nft-price-logo {
+    margin-right: 7px;
+}
+.nft-days {
+    display: grid;
+    grid-template-areas: 
+        "logo days";
+}
+.nft-days-logo {
+    margin-right: 7px;
+    transform: translate(0, 2px);  /*to get it align with the no of days*/
+}
+
+
+
+
+
+
+.creator {
+    margin: 17px 0;
+    line-height: 2.5; /*just making sure the profile and name aligns equally*/
+}
+.creator-img {
+    float: left;   /*making it appear to the right and the text content wrapping around it*/
+    width: 45px;   
+    border-radius: 100%;   /*making it's div to circle to give a white border*/
+    border: 1px solid var(--clr-white);  
+    margin-right: 20px;
+}
+#creator-name {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+#creator-name:hover {
+    color: var(--clr-cyan);
+>>>>>>> e89d76dc9b6e86f2762e082668feb4d3a3375555:css/styles.css
+}
