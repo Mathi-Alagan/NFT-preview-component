@@ -94,12 +94,13 @@ strong {
 }
 .eye-viewer {
     opacity: 0;
-}
-.nft-img-hover-state:hover > .bg-div > .eye-viewer {
-    opacity: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.nft-img-hover-state:hover > .bg-div > .eye-viewer {
+    opacity: 1;
+    transition: .8s;    
 }
 
 
