@@ -37,18 +37,22 @@ body {
     display: flex;    /*easy way to center*/
     justify-content: center;   /*centers horizontally*/
     align-items: center;   /*centers vertically*/
+    font-size: 16px;
     
 }
 
 /*styling the horizontal rule*/
 hr {
-    color: var(--clr-secondary-3);   
+    /*-webkit-color: var(--clr-secondary-3);
+    color: var(--clr-secondary-3); */  
+    border: .1px solid hsl(215, 32%, 27%);
 }
 
 
 /*styling the strong tag*/
 strong {
     color: var(--clr-white);
+    font-weight: 400;
 }
 
 
@@ -66,23 +70,27 @@ strong {
 
 
 
-/*Please try to understand the code for this section alone*/
 .nft-img {
     
-    width: 300px;
+    width: 310px;
+    aspect-ratio: 1/1;
     border-radius: 10px;  
 }
 .nft-img-hover-state {
-    position: relative;
+    position: relative;   /*future positioning of its child elements*/
 }
+
+/*contents to be styled when hovering*/
 .nft-hover {
     position: absolute;
 }
 .nft-img-hover-state:hover > .bg-div {
-    width: 300px;
-    height: 300px;
+    width: 310px;
+    height: 310px;
     border-radius: 10px;
-    background-color: hsla(178, 100%, 50%, 0.507);    
+    background-color: hsla(178, 100%, 50%, 0.507);  
+    cursor: pointer;  
+    transition: .8s; /*slow animation*/
 }
 .eye-viewer {
     opacity: 0;
@@ -117,8 +125,8 @@ strong {
 .subtitle {
     color: var(--clr-secondary-2);
     font-weight: var(--fw-light);
+    font-size: 16px;
 }
-
 .nft-subtitle {
     margin: 20px 0;  /*gap between it and hr*/
 }
